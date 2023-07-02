@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Combinators</title>
+    <style>
+      span {
+        background-color: orange;
+      }
+      div > span {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+		selects all elements that are the direct children of a specified element, 
+		and ( > ) is used.
+		here, even though span 2 is inside the div, its bg color will not be skyblue, since
+		it's not the direct child of the div.
+	-->
+    <div>
+      <span>
+        span-1, in the div.
+        <span>span-2, in the span which is in the div.</span>
+      </span>
+    </div>
+    <span>span-3, outside of the div.</span>
+</body>
+</html>
